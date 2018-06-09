@@ -4,16 +4,18 @@
   "description": "利用阿里云解析的 API 实现动态域名解析的功能（类似花生壳）",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production node app.js",
+    "debug": "node --nolazy --inspect-brk=9229 app.js ",
+    "cli": "sh client.sh YOUR_DOMAIN"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yyqian/aliyun-ddns.git"
+    "url": "git+https://github.com/winse/aliyun-ddns.git"
   },
-  "author": "Yinyin Qian",
+  "author": "Yinyin Qian, Winse Liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yyqian/aliyun-ddns/issues"
+    "url": "https://github.com/winse/aliyun-ddns/issues"
   },
-  "homepage": "https://github.com/yyqian/aliyun-ddns#readme"
+  "homepage": "https://github.com/winse/aliyun-ddns#readme"
 }
