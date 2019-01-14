@@ -55,6 +55,12 @@
 4. 添加记录, 让脚本 5 分钟调用一次: `0/5 * * * * /path/to/client.sh`
 5. 重启 cron 服务: `sudo service cron restart`
 
+```
+20-40/5 * * * * sh -c "cd /root/aliyun-ddns; ./client.sh >>dns.log 2>&1" 
+
+0 */2 * * * sh -c "cd /root/aliyun-ddns; ./client.sh >dns.log 2>&1" 
+```
+
 ## 安全事项
 
 由于本服务的 API 未加任何身份验证措施，相当于是把阿里云解析的修改、添加 API 暴露在了外界，所以一定要注意入口地址的隐藏。
